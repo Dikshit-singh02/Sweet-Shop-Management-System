@@ -6,9 +6,8 @@ import { AuthProvider } from "./context/AuthContext";
 import "./styles/variables.css";
 import "./styles/main.css";
 
-console.log("main.jsx loaded");
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>
