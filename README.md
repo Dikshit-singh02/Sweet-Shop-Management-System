@@ -1,142 +1,72 @@
-# Sweet Shop Management System
+<img width="1917" height="1079" alt="Screenshot 2025-12-14 223852" src="https://github.com/user-attachments/assets/3a26ec1b-dd71-4ec6-93b1-2ee19efa239c" />🍬 Sweet Shop Management System
 
-A full-stack web application for managing a sweet shop's inventory, sales, and customer interactions. Built with React (frontend) and Node.js/Express (backend) with MongoDB database.
+A full-stack Sweet Shop Management System built as part of a TDD Kata to demonstrate clean architecture, RESTful API design, authentication, frontend integration, and responsible AI-assisted development.
 
-## 🚀 Features
+🎯 Objective
 
-### User Management
-- User registration and authentication
-- JWT-based secure login system
-- Role-based access control
+The goal of this project is to design, build, and test a production-ready full-stack application that manages sweets inventory, user authentication, and purchases, following Test-Driven Development (TDD) and modern software engineering best practices.
 
-### Sweet Management
-- Add, edit, and delete sweets from inventory
-- View detailed sweet information (name, price, description, quantity)
-- Real-time inventory tracking
+🚀 Features
+🔐 Authentication & Authorization
 
-### Sales & Purchase
-- Purchase sweets with quantity selection
-- Automatic inventory updates after purchases
-- Sales history tracking
+User registration and login
 
-### Dashboard
-- Overview of available sweets
-- User-friendly interface for managing operations
-- Responsive design for mobile and desktop
+JWT-based authentication
 
-## 🛠️ Tech Stack
+Role-based access control (Admin / User)
 
-### Frontend
-- **React 19.2.0** - Modern JavaScript library for building user interfaces
-- **React Router DOM 7.10.1** - Declarative routing for React
-- **Axios 1.13.2** - HTTP client for API requests
-- **JWT Decode 4.0.0** - Decode JWT tokens
-- **Vite 7.2.4** - Fast build tool and development server
+🍭 Sweet Management (Admin)
 
-### Backend
-- **Node.js** - JavaScript runtime
-- **Express 4.19.2** - Web application framework
-- **MongoDB 9.0.1** - NoSQL database
-- **Mongoose** - MongoDB object modeling
-- **JWT 9.0.3** - JSON Web Token implementation
-- **bcryptjs 3.0.3** - Password hashing
-- **CORS 2.8.5** - Cross-origin resource sharing
+Add new sweets
 
-### Development Tools
-- **Nodemon 3.1.11** - Auto-restart server during development
-- **Jest 30.2.0** - Testing framework
-- **ESLint** - Code linting
-- **Supertest 7.1.4** - HTTP endpoint testing
+Edit existing sweets
 
-## 📋 Prerequisites
+Delete sweets
 
-Before running this application, make sure you have the following installed:
+Restock sweets
 
-- **Node.js** (version 16 or higher)
-- **npm** or **yarn** package manager
-- **MongoDB** (local installation or cloud service like MongoDB Atlas)
-- **Git** for version control
+🛒 Inventory & Purchase
 
-## 🔧 Installation & Setup
+View all available sweets
 
-### 1. Clone the Repository
+Purchase sweets (quantity automatically decreases)
 
-```bash
-git clone <repository-url>
-cd Sweet-Shop-Management-System
-```
+Purchase button disabled when quantity is zero
 
-### 2. Backend Setup
+🔎 Search & Browse
 
-```bash
-# Navigate to backend directory
-cd backend
+View sweets by name, category, and price
 
-# Install dependencies
-npm install
+Clean and responsive UI
 
-# Create environment file
-cp .env.example .env
-```
+🛠️ Tech Stack
+Frontend
 
-Edit the `.env` file with your configuration:
+React + Vite
 
-```env
-PORT=5000
-MONGODB_URI=mongodb://localhost:27017/sweet-shop
-JWT_SECRET=your-super-secret-jwt-key
-NODE_ENV=development
-```
+React Router DOM
 
-### 3. Frontend Setup
+Axios
 
-```bash
-# Navigate to frontend directory
-cd ../frontend
+JWT Decode
 
-# Install dependencies
-npm install
-```
+CSS (custom styling)
 
-### 4. Database Setup
+Backend
 
-Make sure MongoDB is running on your system. If using MongoDB Atlas, update the `MONGODB_URI` in your `.env` file accordingly.
+Node.js
 
-## 🚀 Running the Application
+Express
 
-### Development Mode
+MongoDB + Mongoose
 
-#### Start Backend Server
-```bash
-cd backend
-npm run dev
-```
-The backend server will start on `http://localhost:5000`
+JWT Authentication
 
-#### Start Frontend Development Server
-```bash
-cd frontend
-npm run dev
-```
-The frontend will be available at `http://localhost:5173`
+bcryptjs
 
-### Production Build
+Jest & Supertest (Testing)
 
-#### Build Frontend
-```bash
-cd frontend
-npm run build
-```
-
-#### Start Backend in Production
-```bash
-cd backend
-npm start
-```
-
-## 📁 Project Structure
-
-```
+📁 Project Structure
 Sweet-Shop-Management-System/
 ├── backend/
 │   ├── src/
@@ -159,6 +89,7 @@ Sweet-Shop-Management-System/
 │   ├── .env
 │   ├── package.json
 │   └── server.js
+│
 ├── frontend/
 │   ├── public/
 │   ├── src/
@@ -198,56 +129,135 @@ Sweet-Shop-Management-System/
 │   │   └── routes.jsx
 │   ├── package.json
 │   └── vite.config.js
+│
 ├── .gitattributes
 └── README.md
-```
 
-## 🔗 API Endpoints
+🔗 API Endpoints
+Auth
 
-### Authentication Routes
-- `POST /api/auth/register` - User registration
-- `POST /api/auth/login` - User login
+POST /api/auth/register
 
-### Sweet Management Routes (Protected)
-- `GET /api/sweets` - Get all sweets
-- `POST /api/sweets` - Add new sweet (Admin only)
-- `PUT /api/sweets/:id` - Update sweet (Admin only)
-- `DELETE /api/sweets/:id` - Delete sweet (Admin only)
-- `POST /api/sweets/:id/purchase` - Purchase sweet
+POST /api/auth/login
 
-## 🧪 Testing
+Sweets (Protected)
 
-### Backend Tests
-```bash
+GET /api/sweets
+
+GET /api/sweets/search
+
+POST /api/sweets (Admin)
+
+PUT /api/sweets/:id (Admin)
+
+DELETE /api/sweets/:id (Admin)
+
+POST /api/sweets/:id/purchase
+
+POST /api/sweets/:id/restock (Admin)
+
+🧪 Test-Driven Development (TDD)
+
+Backend logic developed using Red → Green → Refactor
+
+Jest & Supertest used for API testing
+
+Authentication and authorization flows are tested
+
+Edge cases like out-of-stock purchase are handled
+
+▶️ How to Run Locally
+Backend
 cd backend
-npm test
-```
+npm install
+npm run dev
 
-### Frontend Linting
-```bash
+Frontend
 cd frontend
-npm run lint
-```
+npm install
+npm run dev
 
-## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+Backend: http://localhost:5000
 
-## 📝 License
+Frontend: http://localhost:5173
 
-This project is licensed under the ISC License - see the [LICENSE](LICENSE) file for details.
+🧠 My Contribution
 
-## 👨‍💻 Author
+I personally designed and implemented:
 
-**Dikshit Singh**
+Complete backend architecture (controllers, routes, middleware)
 
-## 🙏 Acknowledgments
+JWT-based authentication and role-based authorization
 
-- React community for excellent documentation
-- Express.js for robust backend framework
-- MongoDB for reliable database solution
+RESTful APIs for sweet management and inventory
 
+Full React frontend with protected routes
+
+Admin and user-specific UI controls
+
+Axios API abstraction layer
+
+Auth context and hooks
+
+Debugged blank-screen routing issues
+
+Integrated frontend with backend securely
+
+Ensured clean folder structure and readable code
+
+This project reflects my understanding of full-stack development, not just UI or APIs in isolation.
+
+🤖 My AI Usage
+Tools Used
+
+ChatGPT
+
+How I Used AI
+
+To clarify API design decisions
+
+To debug routing and blank-screen issues
+
+To generate boilerplate suggestions, which I reviewed and modified
+
+To validate JWT and authentication flows
+
+To improve README documentation quality
+
+Reflection
+
+AI significantly improved my productivity and debugging speed.
+However, all final decisions, logic, and integration were done by me.
+I treated AI as a pair programmer, not a replacement for understanding.
+
+📸 Screenshots
+
+(Add screenshots of Home, Login, Dashboard, Sweet List, Admin Add Sweet page)
+<img width="1917" height="1079" alt="Screenshot 2025-12-14 223852" src="https://github.com/user-attachments/assets/83f0d9e7-4ef1-4033-ba7f-0f56083e2d18" />
+<img width="1917" height="1079" alt="Screenshot 2025-12-14 223852" src="https://github.com/user-attachments/assets/949de48f-381a-497c-92d4-f953c6ad6c12" />
+<img width="1917" height="1079" alt="Screenshot 2025-12-14 223852" src="https://github.com/user-attachments/assets/0f7f4afa-8eee-4710-b7ee-97ec2f1c0aba" />
+<img width="1917" height="1079" alt="Screenshot 2025-12-14 223852" src="https://github.com/user-attachments/assets/88797939-606e-447b-92de-8141f2ec0bd6" />
+<img width="1917" height="1079" alt="Screenshot 2025-12-14 223852" src="https://github.com/user-attachments/assets/52c4dc4c-5c46-47f1-b6c8-6bc3ee2a44af" />
+
+
+👨‍💻 Author
+
+Dikshit Singh
+MCA | Full Stack Developer | MERN Stack
+
+✅ Conclusion
+
+This project demonstrates:
+
+Real-world full-stack architecture
+
+Secure authentication
+
+Inventory logic
+
+Clean React routing
+
+TDD mindset
+
+Responsible AI usage
