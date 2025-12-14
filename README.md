@@ -1,5 +1,3 @@
-<img width="1917" height="1079" alt="Screenshot 2025-12-14 223852" src="https://github.com/user-attachments/assets/3a26ec1b-dd71-4ec6-93b1-2ee19efa239c" />🍬 Sweet Shop Management System
-
 A full-stack Sweet Shop Management System built as part of a TDD Kata to demonstrate clean architecture, RESTful API design, authentication, frontend integration, and responsible AI-assisted development.
 
 🎯 Objective
@@ -235,11 +233,10 @@ I treated AI as a pair programmer, not a replacement for understanding.
 
 (Add screenshots of Home, Login, Dashboard, Sweet List, Admin Add Sweet page)
 <img width="1917" height="1079" alt="Screenshot 2025-12-14 223852" src="https://github.com/user-attachments/assets/83f0d9e7-4ef1-4033-ba7f-0f56083e2d18" />
-<img width="1917" height="1079" alt="Screenshot 2025-12-14 223852" src="https://github.com/user-attachments/assets/949de48f-381a-497c-92d4-f953c6ad6c12" />
-<img width="1917" height="1079" alt="Screenshot 2025-12-14 223852" src="https://github.com/user-attachments/assets/0f7f4afa-8eee-4710-b7ee-97ec2f1c0aba" />
-<img width="1917" height="1079" alt="Screenshot 2025-12-14 223852" src="https://github.com/user-attachments/assets/88797939-606e-447b-92de-8141f2ec0bd6" />
-<img width="1917" height="1079" alt="Screenshot 2025-12-14 223852" src="https://github.com/user-attachments/assets/52c4dc4c-5c46-47f1-b6c8-6bc3ee2a44af" />
-
+<img width="1895" height="979" alt="Screenshot 2025-12-14 223704" src="https://github.com/user-attachments/assets/d272c36c-5d02-4352-9ab0-65ec2eab263f" />
+<img width="530" height="447" alt="Screenshot 2025-12-14 221855" src="https://github.com/user-attachments/assets/a16b5c10-e57c-446c-a907-911a02df01a7" />
+<img width="1917" height="911" alt="Screenshot 2025-12-14 223721" src="https://github.com/user-attachments/assets/ab49cafc-19c8-4998-bfe9-501b78d4d839" />
+<img width="530" height="447" alt="Screenshot 2025-12-14 221855" src="https://github.com/user-attachments/assets/87130cec-7e68-47c4-b6df-b18f95de16f1" />
 
 👨‍💻 Author
 
